@@ -1,0 +1,52 @@
+// Font sizes
+$h1: 64px;
+$h2: 36px;
+$h3: 30px;
+$h4: 24px;
+$h5: 20px;
+
+$regular-size: 18px;
+
+// Line height
+$line-height: 2;
+
+// Default spacing
+$spacing: 20px;
+
+// Default font
+@font-face {
+    font-family: "Tenor";
+    src: url(../fonts/TenorSans-Regular.ttf);
+}
+
+// Default all element's definition
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tenor";
+}
+
+// H1 ... H5 definitions
+$titles: (
+    h1: $h1,
+    h2: $h2,
+    h3: $h3,
+    h4: $h4,
+    h5: $h5,
+);
+@each $key, $val in $titles {
+    #{$key} {
+        font-size: $val;
+    }
+}
+
+
+// Colors
+$primary: #3f51b5;
+$secondary: #735600;
+$dark: #161c29;
+$dark-gray: #686c75;
+$gray: #9b9ea3;
+$light-gray: #e4e6eb;
+$light: #f7f8fa;
